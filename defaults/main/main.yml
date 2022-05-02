@@ -1,6 +1,0 @@
-# command to execute to start alacritty
-alacritty_start_cmd: 'alacritty'
-
-# effective, user-based alacritty config file path
-alacritty_config_file_path: "/home/{{ alacritty_user_name }}/.config/alacritty/alacritty.yml"
-

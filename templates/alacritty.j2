@@ -5,3 +5,58 @@
 # Upstream config source:
 #   https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
+# the $TERM env var that will be set for each new instance of alacritty
+env:
+  TERM: '{{ term_env_var }}'
+
+window:
+  # padding (in pixels) to put in between terminal text and window border
+  padding:
+    x: {{ window_padding_pixels }}
+    y: {{ window_padding_pixels }}
+  # show window borders, and show window title bar
+  decorations: {{ 'full' if show_window_borders_and_title_bar else 'none' }}
+  # background opacity of the terminal window: 0.0 (transparent) to 1.0 (opaque)
+  opacity: {{ window_opacity }}
+
+font:
+  normal:
+    family: '{{ font_family }}'
+  bold:
+    family: '{{ font_family }}'
+    style:  '{{ font_style_bold }}'
+  italic:
+    family: '{{ font_family }}'
+    style:  '{{ font_style_italic }}'
+  bold_italic:
+    family: '{{ font_family }}'
+    style:  '{{ font_style_bold_italic }}'
+  size: {{ font_size }}
+
+colors:
+  primary:
+    background: '{{ alacritty_term_colors.background.bg }}'
+    foreground: '{{ alacritty_term_colors.text.fg }}'
+    bright_foreground: '{{ alacritty_term_colors.text.fg_bright }}'
+  cursor:
+    text: '{{ alacritty_term_colors.cursor.fg_text }}'
+    cursor: '{{ alacritty_term_colors.cursor.bg }}'
+  normal:
+    black:   '{{ alacritty_term_colors.black.color0_dimmed }}'
+    red:     '{{ alacritty_term_colors.red.color1_dimmed }}'
+    green:   '{{ alacritty_term_colors.green.color2_dimmed }}'
+    yellow:  '{{ alacritty_term_colors.yellow.color3_dimmed }}'
+    blue:    '{{ alacritty_term_colors.blue.color4_dimmed }}'
+    magenta: '{{ alacritty_term_colors.magenta.color5_dimmed }}'
+    cyan:    '{{ alacritty_term_colors.cyan.color6_dimmed }}'
+    white:   '{{ alacritty_term_colors.white.color7_dimmed }}'
+  bright:
+    black:   '{{ alacritty_term_colors.black.color8_bright }}'
+    red:     '{{ alacritty_term_colors.red.color9_bright }}'
+    green:   '{{ alacritty_term_colors.green.color10_bright }}'
+    yellow:  '{{ alacritty_term_colors.yellow.color11_bright }}'
+    blue:    '{{ alacritty_term_colors.blue.color12_bright }}'
+    magenta: '{{ alacritty_term_colors.magenta.color13_bright }}'
+    cyan:    '{{ alacritty_term_colors.cyan.color14_bright }}'
+    white:   '{{ alacritty_term_colors.white.color15_bright }}'
+
