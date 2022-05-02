@@ -17,3 +17,6 @@ window_opacity: 0.9
 # padding (in pixels) to put in between terminal text and window border
 window_padding_pixels: 5
 
+# shell command to start in the terminal emulator
+shell_cmd: '/bin/sh'
+
