@@ -4,9 +4,6 @@ alacritty_start_cmd: 'alacritty'
 # effective, user-based alacritty config file path
 alacritty_config_file_path: "/home/{{ alacritty_user_name }}/.config/alacritty/alacritty.yml"
 
-# the $TERM env var that will be set for each new instance of alacritty
-term_env_var: 'alacritty'
-
 # show window borders, and show window title bar
 show_window_borders_and_title_bar: false
 
