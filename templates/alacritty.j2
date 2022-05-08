@@ -81,15 +81,16 @@ hints:
   alphabet: '{{ link_hint_chars }}'
 
 key_bindings:
+  # clear UI warnings and screen
   - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, action: ClearLogNotice }
   - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, mode: ~Vi|~Search, chars: "\x0c" }
+  # scrolling
   - { key: {{ scroll.page_up.key }}, mods: {{ scroll.page_up.mods }}, mode: ~Alt, action: ScrollPageUp }
   - { key: {{ scroll.page_down.key }}, mods: {{ scroll.page_down.mods }}, mode: ~Alt, action: ScrollPageDown }
   - { key: {{ scroll.top.key }}, mods: {{ scroll.top.mods }}, mode: ~Alt, action: ScrollToTop }
   - { key: {{ scroll.bottom.key }}, mods: {{ scroll.bottom.mods }}, mode: ~Alt, action: ScrollToBottom }
-
   #  Vi Mode
-  # - { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
+  # - { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode            }
   # - { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
   # - { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
   # - { key: I,                           mode: Vi|~Search, action: ToggleViMode            }

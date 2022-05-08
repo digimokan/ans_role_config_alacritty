@@ -7,6 +7,6 @@ keymap_clear_ui_screen: { mods: 'Control', key: 'L' }
 scroll:
   page_up: { mods: 'Shift', key: 'PageUp' }
   page_down: { mods: 'Shift', key: 'PageDown' }
-  top: { mods: 'Shift', key: 'ScrollToTop' }
-  bottom: { mods: 'Shift', key: 'ScrollToBottom' }
+  top: { mods: 'Shift', key: 'Home' }
+  bottom: { mods: 'Shift', key: 'End' }
 
