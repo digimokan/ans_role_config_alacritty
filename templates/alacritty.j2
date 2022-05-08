@@ -57,6 +57,12 @@ colors:
     cyan:    '{{ alacritty_term_colors.cyan.color14_bright }}'
     white:   '{{ alacritty_term_colors.white.color15_bright }}'
 
+cursor:
+  shape: '{{ cursor_shape }}'
+  blinking: '{{ cursor_blink }}'
+  blink_interval: {{ cursor_blink_interval_ms }}
+  unfocused_hollow: {{ show_hollow_cursor_on_unfocus }}
+
 bell:
   duration: {{ visual_bell_duration_ms }}
   color: '{{ alacritty_term_colors.visual_bell.bg }}'
