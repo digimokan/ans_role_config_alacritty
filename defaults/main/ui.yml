@@ -1,9 +1,3 @@
-# command to execute to start alacritty
-alacritty_start_cmd: 'alacritty'
-
-# effective, user-based alacritty config file path
-alacritty_config_file_path: "/home/{{ alacritty_user_name }}/.config/alacritty/alacritty.yml"
-
 # show window borders, and show window title bar
 show_window_borders_and_title_bar: true
 
@@ -27,7 +21,4 @@ show_hollow_cursor_on_unfocus: true
 
 # hint characters for URL-open links
 link_hint_chars: 'asdfghjkl'
-
-# shell command to start in the terminal emulator
-shell_cmd: '/bin/sh'
 
