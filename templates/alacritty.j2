@@ -13,7 +13,8 @@ window:
   # show window borders, and show window title bar
   decorations: {{ 'full' if show_window_borders_and_title_bar else 'none' }}
   # background opacity of the terminal window: 0.0 (transparent) to 1.0 (opaque)
-  opacity: {{ window_opacity }}
+  # NOTE: requires separate compositor application to be running
+  opacity: {{ alacritty_term_colors.background.opacity }}
 
 font:
   normal:

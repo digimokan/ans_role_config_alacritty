@@ -5,11 +5,7 @@ alacritty_start_cmd: 'alacritty'
 alacritty_config_file_path: "/home/{{ alacritty_user_name }}/.config/alacritty/alacritty.yml"
 
 # show window borders, and show window title bar
-show_window_borders_and_title_bar: false
-
-# background opacity of the terminal window: 0.0 (transparent) to 1.0 (opaque)
-# NOTE: requires separate compositor application to be running
-window_opacity: 0.9
+show_window_borders_and_title_bar: true
 
 # padding (in pixels) to put in between terminal text and window border
 window_padding_pixels: 5
