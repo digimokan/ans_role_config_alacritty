@@ -61,7 +61,7 @@ cursor:
   shape: '{{ cursor_shape }}'
   blinking: '{{ cursor_blink }}'
   blink_interval: {{ cursor_blink_interval_ms }}
-  unfocused_hollow: {{ show_hollow_cursor_on_unfocus }}
+  unfocused_hollow: {{ 'true' if show_hollow_cursor_on_unfocus else 'false' }}
 
 bell:
   duration: {{ visual_bell_duration_ms }}
