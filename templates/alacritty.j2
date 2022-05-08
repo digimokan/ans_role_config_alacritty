@@ -57,6 +57,10 @@ colors:
     cyan:    '{{ alacritty_term_colors.cyan.color14_bright }}'
     white:   '{{ alacritty_term_colors.white.color15_bright }}'
 
+bell:
+  duration: {{ visual_bell_duration_ms }}
+  color: '{{ alacritty_term_colors.visual_bell.bg }}'
+
 shell:
   program: '{{ shell_cmd }}'
 
