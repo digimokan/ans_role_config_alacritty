@@ -25,6 +25,9 @@ cursor_blink_interval_ms: 750
 # when the terminal window is not focused, show a 'hollow box' cursor
 show_hollow_cursor_on_unfocus: true
 
+# hint characters for URL-open links
+link_hint_chars: 'asdfghjkl'
+
 # shell command to start in the terminal emulator
 shell_cmd: '/bin/sh'
 

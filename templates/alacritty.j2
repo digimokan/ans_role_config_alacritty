@@ -38,6 +38,13 @@ colors:
   cursor:
     text: '{{ alacritty_term_colors.cursor.fg_text }}'
     cursor: '{{ alacritty_term_colors.cursor.bg }}'
+  hints:
+    start:
+      foreground: '{{ alacritty_term_colors.urls.fg_text }}'
+      background: '{{ alacritty_term_colors.urls.bg }}'
+    end:
+      foreground: 'CellForeground'
+      background: 'CellBackground'
   normal:
     black:   '{{ alacritty_term_colors.black.color0_dimmed }}'
     red:     '{{ alacritty_term_colors.red.color1_dimmed }}'
@@ -66,6 +73,9 @@ cursor:
 bell:
   duration: {{ visual_bell_duration_ms }}
   color: '{{ alacritty_term_colors.visual_bell.bg }}'
+
+hints:
+  alphabet: '{{ link_hint_chars }}'
 
 shell:
   program: '{{ shell_cmd }}'
