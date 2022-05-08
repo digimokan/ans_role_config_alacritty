@@ -3,3 +3,10 @@
 # clear alacritty UI warning and error notice, and send 'clear-screen' to shell
 keymap_clear_ui_screen: { mods: 'Control', key: 'L' }
 
+# screen scroll keymaps
+scroll:
+  page_up: { mods: 'Shift', key: 'PageUp' }
+  page_down: { mods: 'Shift', key: 'PageDown' }
+  top: { mods: 'Shift', key: 'ScrollToTop' }
+  bottom: { mods: 'Shift', key: 'ScrollToBottom' }
+

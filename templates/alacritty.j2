@@ -83,10 +83,10 @@ hints:
 key_bindings:
   - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, action: ClearLogNotice }
   - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, mode: ~Vi|~Search, chars: "\x0c" }
-  # - { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp   }
-  # - { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
-  # - { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
-  # - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+  - { key: {{ scroll.page_up.key }}, mods: {{ scroll.page_up.mods }}, mode: ~Alt, action: ScrollPageUp }
+  - { key: {{ scroll.page_down.key }}, mods: {{ scroll.page_down.mods }}, mode: ~Alt, action: ScrollPageDown }
+  - { key: {{ scroll.top.key }}, mods: {{ scroll.top.mods }}, mode: ~Alt, action: ScrollToTop }
+  - { key: {{ scroll.bottom.key }}, mods: {{ scroll.bottom.mods }}, mode: ~Alt, action: ScrollToBottom }
 
   #  Vi Mode
   # - { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
