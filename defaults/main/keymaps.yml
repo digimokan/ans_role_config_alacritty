@@ -10,3 +10,12 @@ scroll:
   top: { mods: 'Shift', key: 'Home' }
   bottom: { mods: 'Shift', key: 'End' }
 
+# copy and paste selected text
+copy_text: { mods: 'Control|Shift', key: 'C' }
+paste_text: { mods: 'Control|Shift', key: 'V' }
+
+# increase and decrease font size
+increase_font_size: { mods: 'Control', key: 'Equals' }
+decrease_font_size: { mods: 'Control', key: 'Minus' }
+reset_font_size: { mods: 'Control', key: 'Key0' }
+
