@@ -1,9 +1,9 @@
 # NOTE: multiple actions may be assigned to the same 'key' field
 
-# clear alacritty UI warning and error notice, and send 'clear-screen' to shell
-keymap_clear_ui_screen: { mods: 'Control', key: 'L' }
+# send 'clear-screen' to shell, and clear alacritty UI warning and error notice
+keymap_clear_screen_ui: { mods: 'Control', key: 'L' }
 
-# screen scroll keymaps
+# screen scroll
 scroll:
   page_up: { mods: 'Shift', key: 'PageUp' }
   page_down: { mods: 'Shift', key: 'PageDown' }
@@ -18,4 +18,7 @@ paste_text: { mods: 'Control|Shift', key: 'V' }
 increase_font_size: { mods: 'Control', key: 'Equals' }
 decrease_font_size: { mods: 'Control', key: 'Minus' }
 reset_font_size: { mods: 'Control', key: 'Key0' }
+
+# toggle follow-url hint mode
+toggle_url_hint_mode: { mods: 'Control|Shift', key: 'X' }
 

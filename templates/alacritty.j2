@@ -5,6 +5,7 @@
 # Upstream config source:
 #   https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
+# shell to run inside of alacritty
 shell:
   program: '{{ shell_cmd }}'
 
@@ -73,18 +74,22 @@ cursor:
   blink_interval: {{ cursor_blink_interval_ms }}
   unfocused_hollow: {{ 'true' if show_hollow_cursor_on_unfocus else 'false' }}
 
+# visual warning bell
 bell:
   duration: {{ visual_bell_duration_ms }}
   color: '{{ alacritty_term_colors.visual_bell.bg }}'
 
+# follow-url hint mode
 hints:
   alphabet: '{{ link_hint_chars }}'
+  enabled:
+    binding: { key: {{ toggle_url_hint_mode.key }}, mods: {{ toggle_url_hint_mode.mods }}
 
 # NOTE: 'ReceiveChar' is a no-op that passes the keypresses into terminal
 key_bindings:
-  # clear UI warnings and screen
-  - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, action: ClearLogNotice }
-  - { key: {{ keymap_clear_ui_screen.key }}, mods: {{ keymap_clear_ui_screen.mods }}, mode: ~Vi|~Search, chars: "\x0c" }
+  # clear screen and UI warnings
+  - { key: {{ keymap_clear_screen_ui.key }}, mods: {{ keymap_clear_screen_ui.mods }}, action: ClearLogNotice }
+  - { key: {{ keymap_clear_screen_ui.key }}, mods: {{ keymap_clear_screen_ui.mods }}, mode: ~Vi|~Search, chars: "\x0c" }
   # scrolling
   - { key: {{ scroll.page_up.key }}, mods: {{ scroll.page_up.mods }}, mode: ~Alt, action: ScrollPageUp }
   - { key: {{ scroll.page_down.key }}, mods: {{ scroll.page_down.mods }}, mode: ~Alt, action: ScrollPageDown }
@@ -102,5 +107,5 @@ key_bindings:
   # increase and decrease font size
   - { key: {{ increase_font_size.key }}, mods: {{ increase_font_size.mods }}, action: IncreaseFontSize }
   - { key: {{ decrease_font_size.key }}, mods: {{ decrease_font_size.mods }}, action: DecreaseFontSize }
-  - { key: {{ reset_font_size.key }}, mods: {{ reset_font_size.mods }}, action: ResetFontSize    }
+  - { key: {{ reset_font_size.key }}, mods: {{ reset_font_size.mods }}, action: ResetFontSize }
 
