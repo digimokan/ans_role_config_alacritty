@@ -22,3 +22,6 @@ reset_font_size: { mods: 'Control', key: 'Key0' }
 # toggle follow-url hint mode
 toggle_url_hint_mode: { mods: 'Control|Shift', key: 'X' }
 
+# command to run when following urls
+url_hint_mode_cmd: 'xdg-open'
+
