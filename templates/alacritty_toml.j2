@@ -73,9 +73,15 @@ alphabet = "{{ alacritty_link_hint_chars }}"
 
 [[hints.enabled]]
 command = "{{ alacritty_url_hint_mode_cmd }}"
+hyperlinks = true
+post_processing = false
+persist = false
 mouse.enabled = true
 binding.key = "{{ alacritty_keymap_toggle_url_hint_mode.key }}"
 binding.mods = "{{ alacritty_keymap_toggle_url_hint_mode.mods }}"
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher:
+//|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-
+\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
 
 # NOTE: 'ReceiveChar' is a no-op that passes the keypresses into terminal
 [[keyboard.bindings]]
