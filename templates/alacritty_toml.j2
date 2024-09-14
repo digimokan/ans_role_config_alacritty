@@ -79,15 +79,16 @@ persist = false
 mouse.enabled = true
 binding.key = "{{ alacritty_keymap_toggle_url_hint_mode.key }}"
 binding.mods = "{{ alacritty_keymap_toggle_url_hint_mode.mods }}"
-regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher:
-//|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-
-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+regex = """
+(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher:\
+//|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\
+\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"""
 
 # NOTE: 'ReceiveChar' is a no-op that passes the keypresses into terminal
 [[keyboard.bindings]]
 # clear screen and UI warnings
 key = "{{ alacritty_keymap_clear_screen_ui.key }}"
-mods = "{ alacritty_keymap_clear_screen_ui.mods }}"
+mods = "{{ alacritty_keymap_clear_screen_ui.mods }}"
 action = "ClearLogNotice"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_clear_screen_ui.key }}"
