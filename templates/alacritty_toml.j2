@@ -63,7 +63,7 @@ color = "{{ alacritty_term_colors.visual_bell.bg }}"
 style.shape = "{{ alacritty_cursor_shape }}"
 style.blinking = "{{ alacritty_cursor_blink }}"
 blink_interval = {{ alacritty_cursor_blink_interval_ms }}
-unfocused_hollow = {{ if alacritty_show_hollow_cursor_on_unfocus else }}
+unfocused_hollow = {{ alacritty_show_hollow_cursor_on_unfocus }}
 
 [mouse]
 hide_when_typing = {{ alacritty_hide_mouse_when_typing }}
