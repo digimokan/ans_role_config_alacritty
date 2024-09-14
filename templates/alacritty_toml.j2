@@ -7,7 +7,7 @@
 
 shell = "{{ alacritty_shell_cmd }}"
 
-live_config_reload = {{ alacritty_allow_live_config_reload }}
+live_config_reload = {{ 'true' if alacritty_allow_live_config_reload else 'false' }}
 
 [window]
 padding.x = {{ alacritty_window_padding_pixels }}
@@ -63,10 +63,10 @@ color = "{{ alacritty_term_colors.visual_bell.bg }}"
 style.shape = "{{ alacritty_cursor_shape }}"
 style.blinking = "{{ alacritty_cursor_blink }}"
 blink_interval = {{ alacritty_cursor_blink_interval_ms }}
-unfocused_hollow = {{ alacritty_show_hollow_cursor_on_unfocus }}
+unfocused_hollow = {{ 'true' if alacritty_show_hollow_cursor_on_unfocus else 'false' }}
 
 [mouse]
-hide_when_typing = {{ alacritty_hide_mouse_when_typing }}
+hide_when_typing = {{ 'true' if alacritty_hide_mouse_when_typing else 'false' }}
 
 [hints]
 alphabet = "{{ alacritty_link_hint_chars }}"
