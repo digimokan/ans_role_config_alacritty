@@ -1,0 +1,3 @@
+# command to execute to start alacritty
+alacritty_start_cmd: 'alacritty'
+

@@ -1,0 +1,3 @@
+# shell command to start in the terminal emulator
+alacritty_shell_cmd: '/bin/sh'
+

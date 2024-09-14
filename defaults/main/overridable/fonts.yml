@@ -1,0 +1,15 @@
+# main font-family
+alacritty_font_family: 'monospace'
+
+# font size, in integer or fractional
+alacritty_font_size: 13
+
+# font-family style for bold text
+alacritty_font_style_bold: 'Bold'
+
+# font-family style for italic text
+alacritty_font_style_italic: 'Italic'
+
+# font-family style for bold-italic text
+alacritty_font_style_bold_italic: 'Bold Italic'
+

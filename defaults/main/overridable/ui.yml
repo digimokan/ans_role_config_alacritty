@@ -1,24 +1,24 @@
 # show window borders, and show window title bar
-show_window_borders_and_title_bar: true
+alacritty_show_window_borders_and_title_bar: true
 
 # padding (in pixels) to put in between terminal text and window border
-window_padding_pixels: 5
+alacritty_window_padding_pixels: 5
 
 # Visual bell (screen flash) duration in millisec. Set to 0 to disable bell.
-visual_bell_duration_ms: 300
+alacritty_visual_bell_duration_ms: 300
 
 # shape of cursor: 'Block', 'Beam', or 'Underline'
-cursor_shape: 'Block'
+alacritty_cursor_shape: 'Block'
 
 # whether cursor blinks: 'Never', 'Off', 'On', or 'Always'
-cursor_blink: 'Off'
+alacritty_cursor_blink: 'Off'
 
-# cursor blink interval in millisec (if cursor_blink sets blinking)
-cursor_blink_interval_ms: 750
+# cursor blink interval in millisec (if alacritty_cursor_blink sets blinking)
+alacritty_cursor_blink_interval_ms: 750
 
 # when the terminal window is not focused, show a 'hollow box' cursor
-show_hollow_cursor_on_unfocus: true
+alacritty_show_hollow_cursor_on_unfocus: true
 
 # hint characters for URL-open links
-link_hint_chars: 'asdfghjkl'
+alacritty_link_hint_chars: 'asdfghjkl'
 
