@@ -74,8 +74,8 @@ alphabet = "{{ alacritty_link_hint_chars }}"
 [[hints.enabled]]
 command = "{{ alacritty_url_hint_mode_cmd }}"
 mouse.enabled = true
-binding.key = {{ alacritty_keymap_toggle_url_hint_mode.key }}
-binding.mods = {{ alacritty_keymap_toggle_url_hint_mode.mods }}
+binding.key = "{{ alacritty_keymap_toggle_url_hint_mode.key }}"
+binding.mods = "{{ alacritty_keymap_toggle_url_hint_mode.mods }}"
 
 # NOTE: 'ReceiveChar' is a no-op that passes the keypresses into terminal
 [[keyboard.bindings]]
