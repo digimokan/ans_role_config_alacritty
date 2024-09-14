@@ -53,6 +53,9 @@ Install and configure the alacritty terminal emulator.
        - name: "Install and configure the alacritty terminal emulator"
          ansible.builtin.include_role:
            name: ans_role_config_alacritty
+           public: true
+         vars:
+           alacritty_user_name: "user2"
    ```
 
 ## Role Options

@@ -1,3 +1,13 @@
 # command to execute to start alacritty
-alacritty_start_cmd: 'alacritty'
+alacritty_main_cmd: 'alacritty'
+
+# arg to alacritty command to set the name of the X11 window class
+alacritty_arg_class: "--class "
+
+# arg to alacritty command to start alacritty in a specified directory
+alacritty_arg_starting_dir: "--working-directory "
+
+# arg to alacritty command to execute a specific prog/cmd immediately on start
+# NOTE: make sure this arg goes last
+alacritty_arg_exec: "--command "
 

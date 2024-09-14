@@ -22,3 +22,9 @@ alacritty_show_hollow_cursor_on_unfocus: true
 # hint characters for URL-open links
 alacritty_link_hint_chars: 'asdfghjkl'
 
+# allow live-reload of any config file changes
+alacritty_allow_live_config_reload: false
+
+# max number of lines to keep in the scrollback buffer
+alacritty_scrollback_history: 10000
+

@@ -10,7 +10,7 @@
 - name: "Configure all alacritty behavior in '{{ alacritty_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ alacritty_config_file_path }}"
-    src: "alacritty.j2"
+    src: "alacritty_toml.j2"
     owner: "{{ alacritty_user_name }}"
     mode: '644'
     force: true
