@@ -20,7 +20,7 @@ alacritty_cursor_shape_vi_mode: 'Block'
 alacritty_cursor_blink: 'Off'
 alacritty_cursor_blink_vi_mode: 'Always'
 # cursor blink interval in millisec (if alacritty_cursor_blink sets blinking)
-alacritty_cursor_blink_interval_ms: 500
+alacritty_cursor_blink_interval_ms: 250
 # for cursor_blink 'On', cursor will stop blinking after this number of seconds
 alacritty_cursor_blink_timeout_sec: 30
 # when the terminal window is not focused, show a 'hollow box' cursor
