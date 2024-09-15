@@ -7,6 +7,8 @@ alacritty_keymap_close_term_window: { mods: 'Control', key: 'x' }
 alacritty_keymap_clear_screen: { mods: 'Control|Shift', key: 'l' }
 alacritty_keymap_toggle_vi_mode: { mods: 'Control', key: 'm' }
 alacritty_keymap_toggle_vi_mode_and_pgup: { mods: 'Control', key: 'PageUp' }
+alacritty_keymap_search_mode_backward: { mods: 'Control', key: 's' }
+alacritty_keymap_search_mode_forward: { mods: 'Control|Shift', key: 's' }
 
 alacritty_keymap_copy_text: { mods: 'Control|Shift', key: 'c' }
 alacritty_keymap_paste_text: { mods: 'Control|Shift', key: 'v' }

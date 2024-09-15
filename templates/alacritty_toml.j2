@@ -113,6 +113,11 @@ mods = "{{ alacritty_keymap_clear_screen.mods }}"
 mode = "~Vi|~Search"
 action = "ClearHistory"
 [[keyboard.bindings]]
+key = "{{ alacritty_keymap_clear_screen.key }}"
+mods = "{{ alacritty_keymap_clear_screen.mods }}"
+mode = "Search"
+action = "SearchClear"
+[[keyboard.bindings]]
 key = "{{ alacritty_keymap_toggle_vi_mode.key }}"
 mods = "{{ alacritty_keymap_toggle_vi_mode.mods }}"
 action = "ToggleViMode"
@@ -124,6 +129,22 @@ action = "ToggleViMode"
 key = "{{ alacritty_keymap_toggle_vi_mode_and_pgup.key }}"
 mods = "{{ alacritty_keymap_toggle_vi_mode_and_pgup.mods }}"
 action = "ScrollPageUp"
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_search_mode_backward.key }}"
+mods = "{{ alacritty_keymap_search_mode_backward.mods }}"
+action = "SearchBackward"
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_search_mode_forward.key }}"
+mods = "{{ alacritty_keymap_search_mode_forward.mods }}"
+action = "SearchForward"
+[[keyboard.bindings]]
+key = "Escape"
+mode = "Vi"
+action = "ToggleViMode"
+[[keyboard.bindings]]
+key = "Escape"
+mode = "Search"
+action = "SearchCancel"
 
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_copy_text.key }}"
@@ -150,51 +171,51 @@ action = "ResetFontSize"
 
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_up.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "Up"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_down.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "Down"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_left.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "Left"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_right.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "Right"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_line_start.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "First"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_line_end.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "Last"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_next_word_start.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "WordRight"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_next_word_end.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "WordRightEnd"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_prev_word_start.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "WordLeft"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_page_up.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "ScrollPageUp"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_page_down.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "ScrollPageDown"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_top_of_buffer.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "ScrollToTop"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_end_of_buffer.key }}"
@@ -202,20 +223,20 @@ mode = "Vi"
 action = "ScrollToBottom"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_toggle_visual.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "ToggleNormalSelection"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_toggle_visual_line.key }}"
 mods = "{{ alacritty_keymap_vi_mode_toggle_visual_line.mods }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "ToggleLineSelection"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_next_search_match.key }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "SearchNext"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_prev_search_match.key }}"
 mods = "{{ alacritty_keymap_vi_mode_prev_search_match.mods }}"
-mode = "Vi"
+mode = "Vi|~Search"
 action = "SearchPrevious"
 
