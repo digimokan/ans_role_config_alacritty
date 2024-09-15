@@ -99,7 +99,10 @@ regex = """
 key = "{{ alacritty_keymap_new_term_in_current_dir.key }}"
 mods = "{{ alacritty_keymap_new_term_in_current_dir.mods }}"
 action = "SpawnNewInstance"
-
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_close_term_window.key }}"
+mods = "{{ alacritty_keymap_close_term_window.mods }}"
+action = "Quit"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_clear_screen.key }}"
 mods = "{{ alacritty_keymap_clear_screen.mods }}"
@@ -108,7 +111,7 @@ action = "ClearLogNotice"
 key = "{{ alacritty_keymap_clear_screen.key }}"
 mods = "{{ alacritty_keymap_clear_screen.mods }}"
 mode = "~Vi|~Search"
-command = "clear"
+action = "ClearHistory"
 
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_scroll.page_up.key }}"

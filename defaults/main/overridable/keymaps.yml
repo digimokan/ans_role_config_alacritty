@@ -2,8 +2,9 @@
 # Ref For Key Names: https://docs.rs/winit/latest/winit/keyboard/enum.NamedKey.html
 
 alacritty_keymap_new_term_in_current_dir: { mods: 'Control', key: 'n' }
-
-alacritty_keymap_clear_screen: { mods: 'Control', key: 'l' }
+alacritty_keymap_close_term_window: { mods: 'Control', key: 'x' }
+# Note: unsure why this keymap functions as "Ctrl+l"...
+alacritty_keymap_clear_screen: { mods: 'Control|Shift', key: 'l' }
 
 alacritty_keymap_scroll:
   page_up: { mods: 'Shift', key: 'PageUp' }
