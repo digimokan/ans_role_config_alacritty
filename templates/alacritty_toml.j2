@@ -113,11 +113,6 @@ mods = "{{ alacritty_keymap_clear_screen.mods }}"
 mode = "~Vi|~Search"
 action = "ClearHistory"
 [[keyboard.bindings]]
-key = "{{ alacritty_keymap_clear_screen.key }}"
-mods = "{{ alacritty_keymap_clear_screen.mods }}"
-mode = "Search"
-action = "SearchClear"
-[[keyboard.bindings]]
 key = "{{ alacritty_keymap_toggle_vi_mode.key }}"
 mods = "{{ alacritty_keymap_toggle_vi_mode.mods }}"
 action = "ToggleViMode"
@@ -219,7 +214,8 @@ mode = "Vi|~Search"
 action = "ScrollToTop"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_end_of_buffer.key }}"
-mode = "Vi"
+mods = "{{ alacritty_keymap_vi_mode_end_of_buffer.mods }}"
+mode = "Vi|~Search"
 action = "ScrollToBottom"
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_toggle_visual.key }}"
@@ -239,4 +235,18 @@ key = "{{ alacritty_keymap_vi_mode_prev_search_match.key }}"
 mods = "{{ alacritty_keymap_vi_mode_prev_search_match.mods }}"
 mode = "Vi|~Search"
 action = "SearchPrevious"
+
+[[keyboard.bindings]]
+key = "Enter"
+mode = "Search"
+action = "SearchConfirm"
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_vi_mode_next_search_match.key }}"
+mode = "Search"
+action = "SearchFocusNext"
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_vi_mode_next_search_match.key }}"
+mods = "{{ alacritty_keymap_vi_mode_prev_search_match.mods }}"
+mode = "Search"
+action = "SearchFocusPrevious"
 

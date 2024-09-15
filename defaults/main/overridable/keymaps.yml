@@ -29,7 +29,7 @@ alacritty_keymap_vi_mode_prev_word_start: { key: 'b' }
 alacritty_keymap_vi_mode_page_up: { key: 'PageUp' }
 alacritty_keymap_vi_mode_page_down: { key: 'PageDown' }
 alacritty_keymap_vi_mode_top_of_buffer: { key: 'g' }
-alacritty_keymap_vi_mode_end_of_buffer: { key: 'G' }
+alacritty_keymap_vi_mode_end_of_buffer: { mods: 'Shift', key: 'g' }
 alacritty_keymap_vi_mode_toggle_visual: { key: 'v' }
 alacritty_keymap_vi_mode_toggle_visual_line: { mods: 'Shift', key: 'v' }
 alacritty_keymap_vi_mode_next_search_match: { key: 'n' }
