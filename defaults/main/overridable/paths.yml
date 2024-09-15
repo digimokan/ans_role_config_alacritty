@@ -1,3 +1,9 @@
 # effective, user-based alacritty config file path
 alacritty_config_file_path: "/home/{{ alacritty_user_name }}/.config/alacritty/alacritty.toml"
 
+# example alacritty config file path for Linux OS
+alacritty_linux_example_config_path: '/usr/share/doc/alacritty/example/alacritty.yml'
+
+# example alacritty config file path for FreeBSD OS
+alacritty_freebsd_example_config_path: '/usr/local/share/examples/alacritty/alacritty.yml'
+

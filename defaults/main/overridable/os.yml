@@ -1,6 +1,0 @@
-# example alacritty config file path
-alacritty_linux_example_config_path: '/usr/share/doc/alacritty/example/alacritty.yml'
-
-# example alacritty config file path
-alacritty_freebsd_example_config_path: '/usr/local/share/examples/alacritty/alacritty.yml'
-
