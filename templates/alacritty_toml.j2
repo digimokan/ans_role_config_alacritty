@@ -10,15 +10,18 @@ shell = "{{ alacritty_shell_cmd }}"
 live_config_reload = {{ 'true' if alacritty_allow_live_config_reload else 'false' }}
 
 [window]
+
 padding.x = {{ alacritty_window_padding_pixels }}
 padding.y = {{ alacritty_window_padding_pixels }}
 decorations = "{{ 'Full' if alacritty_show_window_borders_and_title_bar else 'None' }}"
 opacity = {{ alacritty_term_colors.background.opacity }}
 
 [scrolling]
+
 history = {{ alacritty_scrollback_history }}
 
 [font]
+
 normal.family = "{{ alacritty_font_family }}"
 bold.family = "{{ alacritty_font_family }}"
 bold.style = "{{ alacritty_font_style_bold }}"
@@ -29,6 +32,7 @@ bold_italic.style = "{{ alacritty_font_style_bold_italic }}"
 size = {{ alacritty_font_size }}
 
 [colors]
+
 primary.background = "{{ alacritty_term_colors.background.bg }}"
 primary.foreground = "{{ alacritty_term_colors.text.fg }}"
 primary.bright_foreground = "{{ alacritty_term_colors.text.fg_bright }}"
@@ -56,23 +60,28 @@ bright.cyan =    "{{ alacritty_term_colors.cyan.color14_bright }}"
 bright.white =   "{{ alacritty_term_colors.white.color15_bright }}"
 
 [bell]
+
 duration = {{ alacritty_visual_bell_duration_ms }}
 color = "{{ alacritty_term_colors.visual_bell.bg }}"
 
 [cursor]
+
 style.shape = "{{ alacritty_cursor_shape }}"
 style.blinking = "{{ alacritty_cursor_blink }}"
 blink_interval = {{ alacritty_cursor_blink_interval_ms }}
 unfocused_hollow = {{ 'true' if alacritty_show_hollow_cursor_on_unfocus else 'false' }}
 
 [mouse]
+
 hide_when_typing = {{ 'true' if alacritty_hide_mouse_when_typing else 'false' }}
 
 [hints]
+
 alphabet = "{{ alacritty_link_hint_chars }}"
 
 [[hints.enabled]]
-command = "{{ alacritty_url_hint_mode_cmd }}"
+
+command = "{{ alacritty_hint_mode_open_url_cmd }}"
 hyperlinks = true
 post_processing = false
 persist = false
@@ -85,17 +94,22 @@ regex = """
 \u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"""
 
 # NOTE: 'ReceiveChar' is a no-op that passes the keypresses into terminal
+
 [[keyboard.bindings]]
-# clear screen and UI warnings
-key = "{{ alacritty_keymap_clear_screen_ui.key }}"
-mods = "{{ alacritty_keymap_clear_screen_ui.mods }}"
+key = "{{ alacritty_keymap_new_term_in_current_dir.key }}"
+mods = "{{ alacritty_keymap_new_term_in_current_dir.mods }}"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "{{ alacritty_keymap_clear_screen.key }}"
+mods = "{{ alacritty_keymap_clear_screen.mods }}"
 action = "ClearLogNotice"
 [[keyboard.bindings]]
-key = "{{ alacritty_keymap_clear_screen_ui.key }}"
-mods = "{{ alacritty_keymap_clear_screen_ui.mods }}"
+key = "{{ alacritty_keymap_clear_screen.key }}"
+mods = "{{ alacritty_keymap_clear_screen.mods }}"
 mode = "~Vi|~Search"
 command = "clear"
-# scrolling
+
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_scroll.page_up.key }}"
 mods = "{{ alacritty_keymap_scroll.page_up.mods }}"
@@ -116,13 +130,15 @@ key = "{{ alacritty_keymap_scroll.bottom.key }}"
 mods = "{{ alacritty_keymap_scroll.bottom.mods }}"
 mode = "~Alt"
 action = "ScrollToBottom"
-#  Vi Mode (disable it)
+
+# Vi Mode (Disable It)
 [[keyboard.bindings]]
 key = "Space"
 mods = "Shift|Control"
 mode = "~Search"
 action = "ReceiveChar"
-#  Search Mode (disable it)
+
+# Search Mode (Disable It)
 [[keyboard.bindings]]
 key = "F"
 mods = "Control|Shift"
@@ -133,7 +149,7 @@ key = "B"
 mods = "Control|Shift"
 mode = "~Search"
 action = "ReceiveChar"
-#  copy and paste selected text
+
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_copy_text.key }}"
 mods = "{{ alacritty_keymap_copy_text.mods }}"
@@ -147,7 +163,7 @@ action = "Paste"
 key = "Insert"
 mods = "Shift"
 action = "ReceiveChar"
-# increase and decrease font size
+
 [[keyboard.bindings]]
 key = "{{ alacritty_keymap_increase_font_size.key }}"
 mods = "{{ alacritty_keymap_increase_font_size.mods }}"

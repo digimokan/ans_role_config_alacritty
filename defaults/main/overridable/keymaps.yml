@@ -1,27 +1,22 @@
 # NOTE: multiple actions may be assigned to the same 'key' field
+# Ref For Key Names: https://docs.rs/winit/latest/winit/keyboard/enum.NamedKey.html
 
-# send 'clear-screen' to shell, and clear alacritty UI warning and error notice
-alacritty_keymap_clear_screen_ui: { mods: 'Control', key: 'L' }
+alacritty_keymap_new_term_in_current_dir: { mods: 'Control', key: 'n' }
 
-# screen scroll
+alacritty_keymap_clear_screen: { mods: 'Control', key: 'l' }
+
 alacritty_keymap_scroll:
   page_up: { mods: 'Shift', key: 'PageUp' }
   page_down: { mods: 'Shift', key: 'PageDown' }
   top: { mods: 'Shift', key: 'Home' }
   bottom: { mods: 'Shift', key: 'End' }
 
-# copy and paste selected text
-alacritty_keymap_copy_text: { mods: 'Control|Shift', key: 'C' }
-alacritty_keymap_paste_text: { mods: 'Control|Shift', key: 'V' }
+alacritty_keymap_copy_text: { mods: 'Control|Shift', key: 'c' }
+alacritty_keymap_paste_text: { mods: 'Control|Shift', key: 'v' }
 
-# increase and decrease font size
 alacritty_keymap_increase_font_size: { mods: 'Control', key: 'Equals' }
 alacritty_keymap_decrease_font_size: { mods: 'Control', key: 'Minus' }
 alacritty_keymap_reset_font_size: { mods: 'Control', key: 'Key0' }
 
-# toggle follow-url hint mode
-alacritty_keymap_toggle_url_hint_mode: { mods: 'Control|Shift', key: 'X' }
-
-# command to run when following urls
-alacritty_url_hint_mode_cmd: 'xdg-open'
+alacritty_keymap_toggle_url_hint_mode: { mods: 'Control', key: 'i' }
 

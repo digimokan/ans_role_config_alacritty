@@ -1,0 +1,3 @@
+# command to run in hint mode to open a URL
+alacritty_hint_mode_open_url_cmd: 'xdg-open'
+
