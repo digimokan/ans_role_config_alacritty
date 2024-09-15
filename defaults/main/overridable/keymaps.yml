@@ -1,4 +1,3 @@
-# NOTE: multiple actions may be assigned to the same 'key' field
 # Ref For Key Names: https://docs.rs/winit/latest/winit/keyboard/enum.NamedKey.html
 
 alacritty_keymap_new_term_in_current_dir: { mods: 'Control', key: 'n' }
@@ -34,4 +33,7 @@ alacritty_keymap_vi_mode_toggle_visual: { key: 'v' }
 alacritty_keymap_vi_mode_toggle_visual_line: { mods: 'Shift', key: 'v' }
 alacritty_keymap_vi_mode_next_search_match: { key: 'n' }
 alacritty_keymap_vi_mode_prev_search_match: { mods: 'Shift', key: 'n' }
+
+alacritty_keymap_search_mode_next_search_match: { mods: 'Control', key: '.' }
+alacritty_keymap_search_mode_prev_search_match: { mods: 'Control', key: ',' }
 

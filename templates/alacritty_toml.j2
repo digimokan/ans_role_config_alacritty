@@ -67,8 +67,11 @@ color = "{{ alacritty_term_colors.visual_bell.bg }}"
 [cursor]
 
 style.shape = "{{ alacritty_cursor_shape }}"
+vi_mode_style.shape = "{{ alacritty_cursor_shape_vi_mode }}"
 style.blinking = "{{ alacritty_cursor_blink }}"
+vi_mode_style.blinking = "{{ alacritty_cursor_blink_vi_mode }}"
 blink_interval = {{ alacritty_cursor_blink_interval_ms }}
+blink_timeout = {{ alacritty_cursor_blink_timeout_sec }}
 unfocused_hollow = {{ 'true' if alacritty_show_hollow_cursor_on_unfocus else 'false' }}
 
 [mouse]
@@ -237,15 +240,12 @@ mode = "Vi|~Search"
 action = "SearchPrevious"
 
 [[keyboard.bindings]]
-key = "Enter"
-mode = "Search"
-action = "SearchConfirm"
-[[keyboard.bindings]]
 key = "{{ alacritty_keymap_vi_mode_next_search_match.key }}"
+mods = "{{ alacritty_keymap_vi_mode_next_search_match.mods }}"
 mode = "Search"
 action = "SearchFocusNext"
 [[keyboard.bindings]]
-key = "{{ alacritty_keymap_vi_mode_next_search_match.key }}"
+key = "{{ alacritty_keymap_vi_mode_prev_search_match.key }}"
 mods = "{{ alacritty_keymap_vi_mode_prev_search_match.mods }}"
 mode = "Search"
 action = "SearchFocusPrevious"
