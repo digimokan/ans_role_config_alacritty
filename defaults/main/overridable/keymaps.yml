@@ -5,19 +5,31 @@ alacritty_keymap_new_term_in_current_dir: { mods: 'Control', key: 'n' }
 alacritty_keymap_close_term_window: { mods: 'Control', key: 'x' }
 # Note: unsure why this keymap functions as "Ctrl+l"...
 alacritty_keymap_clear_screen: { mods: 'Control|Shift', key: 'l' }
-
-alacritty_keymap_scroll:
-  page_up: { mods: 'Shift', key: 'PageUp' }
-  page_down: { mods: 'Shift', key: 'PageDown' }
-  top: { mods: 'Shift', key: 'Home' }
-  bottom: { mods: 'Shift', key: 'End' }
+alacritty_keymap_toggle_vi_mode: { mods: 'Control', key: 'm' }
+alacritty_keymap_toggle_vi_mode_and_pgup: { mods: 'Control', key: 'PageUp' }
 
 alacritty_keymap_copy_text: { mods: 'Control|Shift', key: 'c' }
 alacritty_keymap_paste_text: { mods: 'Control|Shift', key: 'v' }
-
 alacritty_keymap_increase_font_size: { mods: 'Control', key: 'Equals' }
 alacritty_keymap_decrease_font_size: { mods: 'Control', key: 'Minus' }
 alacritty_keymap_reset_font_size: { mods: 'Control', key: 'Key0' }
-
 alacritty_keymap_toggle_url_hint_mode: { mods: 'Control', key: 'i' }
+
+alacritty_keymap_vi_mode_up: { key: 'k' }
+alacritty_keymap_vi_mode_down: { key: 'j' }
+alacritty_keymap_vi_mode_left: { key: 'h' }
+alacritty_keymap_vi_mode_right: { key: 'l' }
+alacritty_keymap_vi_mode_line_start: { key: 'Key0' }
+alacritty_keymap_vi_mode_line_end: { key: '-' }
+alacritty_keymap_vi_mode_next_word_start: { key: 'w' }
+alacritty_keymap_vi_mode_next_word_end: { key: 'e' }
+alacritty_keymap_vi_mode_prev_word_start: { key: 'b' }
+alacritty_keymap_vi_mode_page_up: { key: 'PageUp' }
+alacritty_keymap_vi_mode_page_down: { key: 'PageDown' }
+alacritty_keymap_vi_mode_top_of_buffer: { key: 'g' }
+alacritty_keymap_vi_mode_end_of_buffer: { key: 'G' }
+alacritty_keymap_vi_mode_toggle_visual: { key: 'v' }
+alacritty_keymap_vi_mode_toggle_visual_line: { mods: 'Shift', key: 'v' }
+alacritty_keymap_vi_mode_next_search_match: { key: 'n' }
+alacritty_keymap_vi_mode_prev_search_match: { mods: 'Shift', key: 'n' }
 
