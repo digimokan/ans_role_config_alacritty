@@ -5,9 +5,13 @@
 # Upstream config source:
 #   https://alacritty.org/config-alacritty.html
 
-shell = "{{ alacritty_shell_cmd }}"
+[general]
 
 live_config_reload = {{ 'true' if alacritty_allow_live_config_reload else 'false' }}
+
+[terminal]
+
+shell = "{{ alacritty_shell_cmd }}"
 
 [window]
 
