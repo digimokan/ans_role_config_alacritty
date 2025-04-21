@@ -9,5 +9,10 @@ alacritty_arg_starting_dir: "--working-directory "
 
 # arg to alacritty command to execute a specific prog/cmd immediately on start
 # NOTE: make sure this arg goes last
-alacritty_arg_exec: "--command "
+alacritty_arg_exec_start: "--command "
+
+# NOTE: syntax is
+# -->  alacritty --command nvim "/file/path"
+# ...so, wrapping cmd and args in '' is not needed
+alacritty_arg_exec_end: ""
 
