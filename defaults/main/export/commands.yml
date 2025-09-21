@@ -11,8 +11,3 @@ alacritty_arg_starting_dir: "--working-directory "
 # NOTE: make sure this arg goes last
 alacritty_arg_exec_cmd: "--command "
 
-# NOTE: syntax is
-# -->  alacritty --command nvim "/file/path"
-# ...so, wrapping cmd and args in '' is not needed
-alacritty_arg_exec_end: ""
-
